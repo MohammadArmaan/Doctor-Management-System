@@ -24,7 +24,11 @@ function App() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get('/api/v1/auth/check', { withCredentials: true });
+        const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+
+        // const res = await axios.get('/api/v1/auth/check', { withCredentials: true });
+        
+        const res = await axios.get(`${apiUrl}/api/v1/auth/check`, { withCredentials: true });
 
         if(res.data.user) setUser(res.data.user); 
 

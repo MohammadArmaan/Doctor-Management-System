@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://doctor-patient-system.vercel.app",
+  "proxy": "https://doctor-management-system-backend.vercel.app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

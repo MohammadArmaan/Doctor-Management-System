@@ -12,9 +12,12 @@ const ForgotPassword = () => {
         e.preventDefault();
         try {
             console.log("User selected:", user);
+            const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+
             const res = await axios({
                 method: "POST",
-                url: `/api/v1/${user}/forgotPassword`,
+                // url: `/api/v1/${user}/forgotPassword`,
+                url: `${apiUrl}/api/v1/${user}/forgotPassword`,
                 data: {
                     email,
                 },

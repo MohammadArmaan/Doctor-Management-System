@@ -28,7 +28,16 @@ const UploadPDF = ({ user }) => {
     formData.append("pdf", file);
 
     try {
-      const res = await axios.post("/api/v1/pdfUpload/", formData, {
+      const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+
+      // const res = await axios.post("/api/v1/pdfUpload/", formData, {
+      //   withCredentials: true,
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //   },
+      // });
+      
+      const res = await axios.post(`${apiUrl}/api/v1/pdfUpload/`, formData, {
         withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data",

@@ -13,10 +13,18 @@ const Logout = ({ setUser }) => {
 
     const handleLogout = async () => {
         try {
-            const patientLogout = axios.get("/api/v1/patients/logout", {
+            const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+
+            // const patientLogout = axios.get("/api/v1/patients/logout", {
+            //     withCredentials: true,
+            // });
+            const patientLogout = axios.get(`${apiUrl}/api/v1/patients/logout`, {
                 withCredentials: true,
             });
-            const doctorLogout = axios.get("/api/v1/doctors/logout", {
+            // const doctorLogout = axios.get(`/api/v1/doctors/logout`, {
+            //     withCredentials: true,
+            // });
+            const doctorLogout = axios.get(`${apiUrl}/api/v1/doctors/logout`, {
                 withCredentials: true,
             });
 

@@ -25,7 +25,11 @@ const Signup = () => {
                 data.specialty = specialty;
             }
 
-            const res = await axios.post(`/api/v1/${user}/signup`, data);
+            const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+
+
+            // const res = await axios.post(`/api/v1/${user}/signup`, data);
+            const res = await axios.post(`${apiUrl}/api/v1/${user}/signup`, data);
 
             console.log(res); 
             if (res.status === 201) {

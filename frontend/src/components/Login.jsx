@@ -12,10 +12,12 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            console.log("User selected:", user);
+        const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+        
             const res = await axios({
                 method: "POST",
-                url: `/api/v1/${user}/login`,
+                // url: `/api/v1/${user}/login`,
+                url: `${apiUrl}/api/v1/${user}/login`,
                 data: {
                     email,
                     password,

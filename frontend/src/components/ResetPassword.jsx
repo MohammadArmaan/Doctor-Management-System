@@ -14,10 +14,11 @@ const ResetPassword = () => {
     const handleResetPassword = async (e) => {
         e.preventDefault();
         try {
-            console.log("User selected:", user);
+            const apiUrl = 'https://doctor-management-system-backend.vercel.app';
             const res = await axios({
                 method: "PATCH",
-                url: `/api/v1/${user}/resetPassword/${token}`,
+                // url: `/api/v1/${user}/resetPassword/${token}`,
+                url: `${apiUrl}/api/v1/${user}/resetPassword/${token}`,
                 data: {
                     password,
                     passwordConfirm

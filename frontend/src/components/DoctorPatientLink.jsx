@@ -12,9 +12,12 @@ const DoctorPatientLink = ({ user }) => {
     const handleDoctorPatientLink = async (e) => {
         e.preventDefault();
         try {
+        const apiUrl = 'https://doctor-management-system-backend.vercel.app';
+        
             const res = await axios({
                 method: "POST",
-                url: `/api/v1/doctorPatient`,
+                // url: `/api/v1/doctorPatient`,
+                url: `${apiUrl}/api/v1/doctorPatient`,
                 data: {
                     name,
                     email,
