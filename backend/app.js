@@ -17,7 +17,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 app.use(cors());
-app.options("*", cors());
+
+const corsOptions = {
+    origin: "https://doctor-management-system-frontend.vercel.app", 
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, 
+};
+
+app.use(cors(corsOptions));
 
 app.use(morgan("tiny"));
 
