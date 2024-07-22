@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cors());
 
 const corsOptions = {
-    origin: "https://doctor-management-system-frontend.vercel.app", 
+    origin: ["https://doctor-management-system-frontend.vercel.app", "http://localhost:5173"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, 
 };

@@ -30,6 +30,9 @@ function App() {
         
         const res = await axios.get(`${apiUrl}/api/v1/auth/check`, { withCredentials: true });
 
+        console.log(res);
+        console.log(res.data.user);
+
         if(res.data.user) setUser(res.data.user); 
 
       } catch (err) {
